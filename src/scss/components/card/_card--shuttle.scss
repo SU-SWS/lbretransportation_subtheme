@@ -29,6 +29,14 @@
   
 .su-card {
   border-top: 9px solid var(--clr-su-color);
+  height: 100%;
+  position: relative;
+}
+
+// To achieve the equal height cards.
+.ds-entity--node.ds-entity--stanford-page {
+  position: relative;
+  height: 100%;
 }
 
 .shuttle-card h3 {
