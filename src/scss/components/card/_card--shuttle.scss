@@ -39,6 +39,33 @@
   height: 100%;
 }
 
+// Overide from the Profile Helper.
+.ds-entity--stanford-page {
+  .su-card {
+    .su-card__contents {
+      h3 {
+        font-size: 1.2em;
+        border-bottom: 1px solid #dad7cb;
+      }
+    }
+  }
+}
+
+// Overide from the new module.
+.su-news-vertical-teaser.su-card {
+  h3.su-link {
+    font-size: 1.2em;
+  }
+}
+
+.su-card {
+  .su-card__contents {
+    >:last-child:not(.su-card__button) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 .shuttle-card h3 {
   margin-bottom: 1rem;
   display: flex;
