@@ -27,8 +27,11 @@
   --clr-su-red: #ED1C24;
 }
   
-.su-card {
+.shuttle-card {
   border-top: 9px solid var(--clr-su-color);
+}
+
+.su-card {
   height: 100%;
   position: relative;
 }
