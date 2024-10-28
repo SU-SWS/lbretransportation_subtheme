@@ -25,8 +25,10 @@
   --clr-su-light-red: #ec7174;
 
   --clr-su-red: #ED1C24;
+
+  --clr-su-bright-yellow: #EDE80C;
 }
-  
+
 .shuttle-card {
   border-top: 9px solid var(--clr-su-color);
 }
@@ -159,6 +161,15 @@
 
 .flag-mark--light-green {
   --clr-su-color: var(--clr-su-light-green);
+
+  h3:after,
+  &:after {
+    color: var(--clr-su-text-dark);
+  }
+}
+
+.flag-mark--bright-yellow {
+  --clr-su-color: var(--clr-su-bright-yellow);
 
   h3:after,
   &:after {
