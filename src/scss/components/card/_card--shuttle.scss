@@ -27,6 +27,8 @@
   --clr-su-red: #ED1C24;
 
   --clr-su-bright-yellow: #EDE80C;
+
+  --clr-su-brown: #954A35;
 }
 
 .shuttle-card {
@@ -175,6 +177,10 @@
   &:after {
     color: var(--clr-su-text-dark);
   }
+}
+
+.flag-mark--brown {
+  --clr-su-color: var(--clr-su-brown);
 }
 
 .flag-mark--blue-green {
