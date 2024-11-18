@@ -2,7 +2,12 @@
 
 // Equal height cards
 
+.paragraph--type--stanford-entity .su-entity-item>div,
+.ptype-stanford-entity .su-entity-item>div,
 .ds-entity--paragraph.ds-entity--stanford-card,
-.ptype-stanford-card {
+.su-page-components .ptype-stanford-entity,
+.ptype-stanford-card,
+.su-entity-item {
   height: 100%;
 }
+
