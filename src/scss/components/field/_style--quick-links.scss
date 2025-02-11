@@ -60,6 +60,18 @@
           }
         }
 
+        // 2/11/2025: Original way of doing this. Leaving in so content change can happen slowly.
+        &::before {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -1.35rem;
+          font-size: 3.2rem;
+          line-height: 1.8rem;
+          content: "\203A";
+        }
+
+        // Adding the aria-hidden=true and using a span.
         .caret {
           &::before {
             position: absolute;
