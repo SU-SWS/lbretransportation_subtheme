@@ -60,14 +60,16 @@
           }
         }
 
-        &::before {
-          position: absolute;
-          right: 0;
-          top: 50%;
-          margin-top: -1.35rem;
-          font-size: 3.2rem;
-          line-height: 1.8rem;
-          content: "\203A";
+        .caret {
+          &::before {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -1.35rem;
+            font-size: 3.2rem;
+            line-height: 1.8rem;
+            content: "\203A";
+          }
         }
       }
     }
