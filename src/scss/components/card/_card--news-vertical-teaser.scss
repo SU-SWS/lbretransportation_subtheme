@@ -114,3 +114,11 @@
     }
   }
 }
+
+.stanford-news-vertical-teaser-term {
+  .su-list-unstyled {
+    &.grid-container-3 {
+      @include responsive-spacing('margin-bottom', 5);
+    }
+  }
+}
