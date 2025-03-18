@@ -122,3 +122,9 @@
     }
   }
 }
+
+@include grid-media-max('sm') {
+  .su-news-vertical-teaser.su-card .su-news-vertical-teaser__link {
+    padding-top: 0;
+  }
+}
