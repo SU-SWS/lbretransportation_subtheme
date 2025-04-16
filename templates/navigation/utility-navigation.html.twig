@@ -1,6 +1,16 @@
 <div class="utility-navigation">
   {% include "@decanter/elements/link/link.twig" with {
     attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
+    link_href: "https://campus-map.stanford.edu/",
+    link_content: 'Stanford Searchable Map'|t
+  } %}
+  {% include "@decanter/elements/link/link.twig" with {
+    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
+    link_href: "https://plancommute.stanford.edu",
+    link_content: 'Plan Your Commute'|t
+  } %}
+  {% include "@decanter/elements/link/link.twig" with {
+    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
     link_href: "https://permitparking.stanford.edu",
     link_content: 'Purchase Permit'|t
   } %}
@@ -11,7 +21,7 @@
   } %}
   {% include "@decanter/elements/link/link.twig" with {
     attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
-    link_href: "https://plancommute.stanford.edu",
-    link_content: 'Plan Your Commute'|t
+    link_href: "https://transportation-forms.stanford.edu/transit-pass/",
+    link_content: 'Transit Pass Request'|t
   } %}
 </div>
