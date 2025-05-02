@@ -96,19 +96,36 @@
 }
 
 // Fix to the disappearing images. TSS-135.
-.su-card.su-news-vertical-teaser .su-card__media {
-  position: relative;
+.su-card {
+  &.su-news-vertical-teaser {
+    .su-card__media {
+      position: relative;
+      overflow: hidden;
+
+      picture,
+      img {
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
-.su-card.su-news-vertical-teaser .su-card__media picture, .su-card.su-news-vertical-teaser .su-card__media img {
-  position: absolute;
-  height: 100%;
-  object-fit: cover;
-}
+body {
+  .su-card {
+    &.su-news-vertical-teaser {
+      .su-card__media {
+        position: relative;
+        overflow: hidden;
 
-body .su-card.su-news-vertical-teaser .su-card__media div,
-body .su-card.su-news-vertical-teaser .su-card__media span {
-  height: unset;
+        div,
+        span {
+          height: unset;
+        }
+      }
+    }
+  }
 }
 
 .cards-color--dark.paragraph--type--stanford-lists {
