@@ -53,6 +53,7 @@
     @include grid-media("lg") {
       display: flex;
       align-items: center;
+      flex-direction: row;
     }
 
     &::before {
