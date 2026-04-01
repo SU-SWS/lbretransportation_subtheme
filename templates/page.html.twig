@@ -8,6 +8,7 @@
  * - attributes: HTML attributes for the region div.
  *
  * @see template_preprocess_page()
+ * Adds chatbot
  */
 #}
 
@@ -52,6 +53,10 @@
         {{ page.menu }}
       </section>
     </header>
+
+    {# Chatbot include. Up higher in DOM for screenreaders #}
+    {% include '@lbretransportation_subtheme/chat.html.twig' %}
+
   {%- endif -%}
 {%- endblock -%}
 
