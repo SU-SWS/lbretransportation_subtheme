@@ -25,7 +25,7 @@
 {# Masthead Section. #}
 {%- block block_header -%}
   {%- if page.header or page.search or page.menu -%}
-    <header class="su-masthead su-masthead--right">
+    <header class="su-masthead su-masthead--right" data-nosnippet>
 
       {% block block_skiplinks %}
         <a href="#main-content" class="visually-hidden focusable su-skipnav su-skipnav--content">
@@ -46,11 +46,23 @@
         {{ page.help }}
       {%- endblock -%}
 
-      <section>
+      <section class="su-masthead--inner" aria-label="Page logo, menu and search">
         {% include "@lbretransportation_subtheme/navigation/utility-navigation.html.twig" %}
-        {{ page.header }}
-        {{ page.search }}
-        {{ page.menu }}
+        {% if page.header %}
+          <div class="region region-header">
+            {{ page.header }}
+          </div>
+        {% endif %}
+        {% if page.search %}
+          <div class="region region-search">
+            {{ page.search }}
+          </div>
+        {% endif %}
+        {% if page.menu %}
+          <div class="region region-menu">
+            {{ page.menu }}
+          </div>
+        {% endif %}
       </section>
     </header>
 
@@ -65,17 +77,17 @@
   {%- block block_main -%}
     {{ page.content }}
   {%- endblock -%}
+
+  <button id="back-to-top">
+    <span class="fas fa-chevron-up"></span>
+    Back to Top
+  </button>
 </main>
 
 {# Footer Section #}
 {%- block block_footer -%}
-  <footer id="footer">
+  <footer id="footer" data-nosnippet>
     {{ page.footer }}
-    {%- include template_global_footer -%}
+    {%- include template_global_footer with { modifier_class : global_footer_variant } -%}
   </footer>
 {%- endblock -%}
-
-<button id="back-to-top">
-  <span class="fas fa-chevron-up"></span>
-  Back to Top
-</button>
