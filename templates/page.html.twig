@@ -22,54 +22,56 @@
 {%- endif -%}
 {# End Template Paths. #}
 
-{# Masthead Section. #}
+{# Masthead Section.
+   Always render <header>: stanford_basic only outputs it when header/search/menu
+   are non-empty, which hides the brand bar and entire masthead if those regions
+   are empty (e.g. block visibility, wrong region, or LB layout).
+#}
 {%- block block_header -%}
-  {%- if page.header or page.search or page.menu -%}
-    <header class="su-masthead su-masthead--right" data-nosnippet>
+  <header class="su-masthead su-masthead--right" data-nosnippet>
 
-      {% block block_skiplinks %}
-        <a href="#main-content" class="visually-hidden focusable su-skipnav su-skipnav--content">
-          {{ 'Skip to main content'|t }}
-        </a>
-        <a href="#secondary-navigation" class="visually-hidden focusable su-skipnav su-skipnav--secondary">
-          {{ 'Skip to secondary navigation'|t }}
-        </a>
-      {% endblock %}
+    {% block block_skiplinks %}
+      <a href="#main-content" class="visually-hidden focusable su-skipnav su-skipnav--content">
+        {{ 'Skip to main content'|t }}
+      </a>
+      <a href="#secondary-navigation" class="visually-hidden focusable su-skipnav su-skipnav--secondary">
+        {{ 'Skip to secondary navigation'|t }}
+      </a>
+    {% endblock %}
 
-      {# Brand Bar #}
-      {%- block block_brandbar -%}
-        {%- include template_brand_bar with { modifier_class : brand_bar_variant } -%}
-      {%- endblock -%}
+    {# Brand Bar #}
+    {%- block block_brandbar -%}
+      {%- include template_brand_bar with { modifier_class : brand_bar_variant } -%}
+    {%- endblock -%}
 
-      {# Help Section #}
-      {%- block block_help -%}
-        {{ page.help }}
-      {%- endblock -%}
+    {# Help Section #}
+    {%- block block_help -%}
+      {{ page.help }}
+    {%- endblock -%}
 
-      <section class="su-masthead--inner" aria-label="Page logo, menu and search">
-        {% include "@lbretransportation_subtheme/navigation/utility-navigation.html.twig" %}
-        {% if page.header %}
-          <div class="region region-header">
-            {{ page.header }}
-          </div>
-        {% endif %}
-        {% if page.search %}
-          <div class="region region-search">
-            {{ page.search }}
-          </div>
-        {% endif %}
-        {% if page.menu %}
-          <div class="region region-menu">
-            {{ page.menu }}
-          </div>
-        {% endif %}
-      </section>
-    </header>
+    <section class="su-masthead--inner" aria-label="Page logo, menu and search">
+      {% include "@lbretransportation_subtheme/navigation/utility-navigation.html.twig" %}
+      {% if page.header %}
+        <div class="region region-header">
+          {{ page.header }}
+        </div>
+      {% endif %}
+      {% if page.search %}
+        <div class="region region-search">
+          {{ page.search }}
+        </div>
+      {% endif %}
+      {% if page.menu %}
+        <div class="region region-menu">
+          {{ page.menu }}
+        </div>
+      {% endif %}
+    </section>
+  </header>
 
-    {# Chatbot include. Up higher in DOM for screenreaders #}
-    {% include '@lbretransportation_subtheme/chat.html.twig' %}
+  {# Chatbot include. Up higher in DOM for screenreaders #}
+  {% include '@lbretransportation_subtheme/chat.html.twig' %}
 
-  {%- endif -%}
 {%- endblock -%}
 
 {# Main Page Content Section #}
