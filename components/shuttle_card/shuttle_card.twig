@@ -1,0 +1,11 @@
+{% set attributes = attributes.addClass(["su-card","shuttle-card", "flag-mark--" ~ flag_color]) %}
+{% set attributes = attributes.setAttribute("style", "--flag-mark-content: '" ~ tag ~ "'") %}
+<article{{ attributes }}>
+  <section class="su-card__contents">
+    <{{ header_tag }}>
+    <a href="{{ url }}">{{ title }}</a>
+  </{{ header_tag }}>
+  {{ dek }}
+  </section>
+</article>
+
