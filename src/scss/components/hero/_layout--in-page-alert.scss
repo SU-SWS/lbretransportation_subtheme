@@ -51,9 +51,14 @@
     padding: 1.8rem;
 
     @include grid-media("lg") {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
+      > * {
+        margin-left: 40px;
+      }
+
+      &::before {
+        position: absolute;
+        top: calc(50% - 10px);
+      }
     }
 
     &::before {
