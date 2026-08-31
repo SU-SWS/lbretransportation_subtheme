@@ -1,0 +1,32 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Shuttle Card
+status: stable
+required:
+  - title
+props:
+  type: object
+  properties:
+    header_tag:
+      type: string
+      title: Header Tag
+      default: "h2"
+      enum:
+        - h2
+        - h3
+        - h4
+    title:
+      type: string
+      title: Title
+    url:
+      type: string
+      title: Url
+    tag:
+      type: string
+      title: Tag
+    dek:
+      type: string
+      title: Dek
+    flag_color:
+      type: string
+      title: Flag Color
+

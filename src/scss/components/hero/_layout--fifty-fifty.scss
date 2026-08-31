@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.layout--fifty-fifty {
+.layout--fifty-fifty .su-hero {
   display: block;
   min-height: 0;
   margin-left: 2.4rem;
@@ -105,7 +105,7 @@
   }
 }
 
-.overlay-right .layout--fifty-fifty {
+.layout--fifty-fifty .overlay-right {
   @include grid-media("lg") {
     flex-direction: row;
   }

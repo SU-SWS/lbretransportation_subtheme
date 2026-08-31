@@ -1,27 +1,7 @@
 <div class="utility-navigation">
-  {% include "@decanter/elements/link/link.twig" with {
-    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
-    link_href: "https://campus-map.stanford.edu/",
-    link_content: 'Stanford Searchable Map'|t
-  } %}
-  {% include "@decanter/elements/link/link.twig" with {
-    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
-    link_href: "https://plancommute.stanford.edu",
-    link_content: 'Plan Your Commute'|t
-  } %}
-  {% include "@decanter/elements/link/link.twig" with {
-    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
-    link_href: "https://permitparking.stanford.edu",
-    link_content: 'Purchase Permit'|t
-  } %}
-  {% include "@decanter/elements/link/link.twig" with {
-    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
-    link_href: "https://visitorparking.stanford.edu",
-    link_content: 'Visitor Parking'|t
-  } %}
-  {% include "@decanter/elements/link/link.twig" with {
-    attributes: create_attribute({'class': ['external-link'], 'target': '_blank'}),
-    link_href: "https://transportation-forms.stanford.edu/transit-pass/",
-    link_content: 'Transit Pass Request'|t
-  } %}
+  {{ link("Stanford Searchable Map", "https://campus-map.stanford.edu/", {class: ["external-link"], target: "_blank"}) }}
+  {{ link("Plan Your Commute", "https://plancommute.stanford.edu", {class: ["external-link"], target: "_blank"}) }}
+  {{ link("Purchase Permit", "https://permitparking.stanford.edu", {class: ["external-link"], target: "_blank"}) }}
+  {{ link("Visitor Parking", "https://visitorparking.stanford.edu", {class: ["external-link"], target: "_blank"}) }}
+  {{ link("Transit Pass Request", "https://transportation-forms.stanford.edu/transit-pass/", {class: ["external-link"], target: "_blank"}) }}
 </div>

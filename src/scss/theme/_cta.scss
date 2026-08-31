@@ -15,7 +15,12 @@
   .su-alert--warning &,
   .su-alert--info &,
   .su-alert--success &,
-  .su-alert--plain & {
+  .su-alert--plain &,
+  .su-page-banner .color--black &,
+  .su-page-banner .color--cardinal-red &,
+  .su-page-banner .color--sky-blue &,
+  .su-page-banner .color--brick &,
+  .su-page-banner .color--palo-verde & {
     &:after {
       background-color: $su-color-white;
     }
@@ -48,7 +53,12 @@
   .su-alert--warning &,
   .su-alert--info &,
   .su-alert--success &,
-  .su-alert--plain & {
+  .su-alert--plain &,
+  .su-page-banner .color--black &,
+  .su-page-banner .color--cardinal-red &,
+  .su-page-banner .color--sky-blue &,
+  .su-page-banner .color--brick &,
+  .su-page-banner .color--palo-verde & {
     &:after {
       background-color: $su-color-white;
     }

@@ -7,23 +7,23 @@
     color: $su-color-white;
   }
 
-  &.color--black .su-hero__card {
+  .color--black & .su-hero__card {
     background-color: $su-color-black;
   }
 
-  &.color--cardinal-red .su-hero__card {
+  .color--cardinal-red & .su-hero__card {
     background-color: $su-color-cardinal-red;
   }
 
-  &.color--sky-blue .su-hero__card {
+  .color--sky-blue & .su-hero__card {
     background-color: $su-color-sky-dark;
   }
 
-  &.color--brick .su-hero__card {
+  .color--brick & .su-hero__card {
     background-color: $su-color-brick-light;
   }
 
-  &.color--palo-verde .su-hero__card {
+  .color--palo-verde & .su-hero__card {
     background-color: $su-color-palo-verde-dark;
   }
 

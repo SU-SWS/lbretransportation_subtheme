@@ -1,0 +1,13 @@
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ include("lbretransportation_subtheme:shuttle_card", {
+    header_tag: "h3",
+    title: node.label,
+    url: url,
+    dek: content.su_page_description,
+    tag: tag,
+    flag_color: flag_color
+  }, with_context = false) }}
+  {{ title_suffix }}
+</div>
