@@ -103,17 +103,15 @@
     }
   }
 
-  .su-card__inner {
-    > h2 {
-      margin-bottom: 1rem;
-      font-size: 1.5625em;
-      letter-spacing: -0.012em;
-    }
+  > h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5625em;
+    letter-spacing: -0.012em;
+  }
 
-    p {
-      margin-bottom: 0;
-      line-height: 1.4;
-    }
+  p {
+    margin-bottom: 0;
+    line-height: 1.4;
   }
 
   &.color--black .su-card__contents::before {
